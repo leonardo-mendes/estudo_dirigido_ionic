@@ -7,15 +7,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Produtos</ion-title>
+    <ion-title *ngIf="produtos">{{produtos.nome}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list>
-    <button ion-item *ngFor="let produto of produtos">
+  <ion-list *ngIf="produtos">
+    <button ion-item *ngFor="let item of produtos.produtos" (click)="openProduto(item)"> 
+      {{item.nome}}
+      <br>
     </button>
   </ion-list>
 </ion-content>

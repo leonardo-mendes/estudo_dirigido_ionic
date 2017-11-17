@@ -35,8 +35,8 @@ export class ListPage {
 
   // Aqui é a função que abre o detalhe da página
   openCategoria(categoria){
+    console.log("Categoria aberta foi: "+categoria.id);
     this.navCtrl.push(ListprodutosPage, {id: categoria.id});
-    console.log("Categoria aberta foi: "+categoria.id);_
   }
 
   

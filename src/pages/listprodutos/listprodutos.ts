@@ -2,13 +2,14 @@ import { CategoriaProvider } from './../../providers/categoria/categoria';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProdutoProvider } from "../../providers/produto/produto";
+import { ProdutoPage } from '../produto/produto';
 
 @IonicPage()
 @Component({
   selector: 'page-listprodutos',
   templateUrl: 'listprodutos.html',
   providers: [
-    CategoriaProvider
+    ProdutoProvider
   ]
 })
 export class ListprodutosPage {
@@ -37,7 +38,13 @@ export class ListprodutosPage {
         console.log(error);
       }
     )
-
   }
+
+    // Aqui é a função que abre o detalhe da página
+    openProduto(produto){
+      console.log("O Produto aberto foi: "+produto.id);
+      this.navCtrl.push(ProdutoPage, {id: produto.id});
+    }
+  
 
 }

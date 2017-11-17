@@ -20,6 +20,10 @@ export class ProdutoProvider {
     return this.http.get(this.url + "categorias/" + idCategoria);
   }
 
+  getProduto(idProduto:string) {
+    return this.http.get(this.url + "produtos/" + idProduto);
+  }
+
 
 
 

@@ -7,12 +7,26 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>produto</ion-title>
+    <ion-title *ngIf="produto">{{produto.nome}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content *ngIf="produto" padding>
+  <ion-card>
+    <img src="assets/imgs/download.png" />
+    <ion-card-content>
+      <ion-card-title>
+        {{produto.nome}}
+      </ion-card-title>
+      <p>
+        Detalhes do produtos
+      </p>
+      <p>
+        R$ {{produto.preco}} <ion-icon md="md-cart"></ion-icon>
+        
+      </p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
