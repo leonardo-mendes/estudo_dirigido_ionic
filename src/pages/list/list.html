@@ -9,7 +9,7 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="let categoria of categorias">
+    <button ion-item *ngFor="let categoria of categorias" (click)="openCategoria(categoria)">
       {{categoria.nome}}<br>
     </button>
   </ion-list>
