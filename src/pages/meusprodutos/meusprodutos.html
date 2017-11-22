@@ -1,0 +1,32 @@
+<!--
+  Generated template for the MeusprodutosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Produtos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list *ngIf="produtos">
+    <ion-item-sliding #item *ngFor="let produto of produtos">
+      <ion-item>
+        {{produto.nome}}
+      </ion-item>
+      <ion-item-options side="right">
+        <button ion-button expandable (click)="showConfirm(produto)">Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

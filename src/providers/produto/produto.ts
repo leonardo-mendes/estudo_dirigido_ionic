@@ -24,7 +24,12 @@ export class ProdutoProvider {
     return this.http.get(this.url + "produtos/" + idProduto);
   }
 
+  getProdutos() {
+    return this.http.get(this.url + "produtos");
+  }
 
-
+  deleteProduto(idProduto:string) {
+    return this.http.delete(this.url + "produtos/" + idProduto);
+  }
 
 }

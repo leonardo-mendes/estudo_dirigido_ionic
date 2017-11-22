@@ -15,6 +15,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from "@angular/http";
 import { CategoriaProvider } from '../providers/categoria/categoria';
 import { ProdutoProvider } from '../providers/produto/produto';
+import { MeusprodutosPageModule } from '../pages/meusprodutos/meusprodutos.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ProdutoProvider } from '../providers/produto/produto';
     IonicModule.forRoot(MyApp),
     HttpModule,
     ListprodutosPageModule,
-    ProdutoPageModule
+    ProdutoPageModule,
+    MeusprodutosPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
